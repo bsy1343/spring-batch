@@ -1,6 +1,7 @@
 package io.springbatchlecture;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.StepContribution;
@@ -12,8 +13,10 @@ import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 @RequiredArgsConstructor
+//@Configuration
+@Slf4j
 public class DBJobConfiguration {
 
     private final JobBuilderFactory jobBuilderFactory;
