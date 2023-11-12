@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 
 //@Configuration
 @RequiredArgsConstructor
-//@Configuration
+@Configuration
 @Slf4j
 public class DBJobConfiguration {
 
