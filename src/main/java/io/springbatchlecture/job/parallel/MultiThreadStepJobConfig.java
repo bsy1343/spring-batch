@@ -25,6 +25,10 @@ import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.core.task.TaskExecutor;
 
+
+/*
+* 청크 단위로 병렬처리
+* */
 @Configuration
 @AllArgsConstructor
 public class MultiThreadStepJobConfig {
@@ -58,6 +62,8 @@ public class MultiThreadStepJobConfig {
     @Bean
     public TaskExecutor taskExecutor() {
         SimpleAsyncTaskExecutor taskExecutor = new SimpleAsyncTaskExecutor("spring-batch-task-executor");
+        // 동시에 실행하는 쓰레드를 4개로 제한
+        // taskExecutor.setConcurrencyLimit(4);
         return taskExecutor;
     }
 
